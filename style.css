@@ -1,19 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap');
 
-
-*{
-    margin: 0;
+:root{
+    --azul-dnc: #0c70f2;
+    --preto-dnc: #303030;
+    --cinza-hover: #c9c9c9;
+    --font-padrão: 'Inter'
 }
+
     body{
         margin: 0;
         padding: 0;
+
+        /* background: linear-gradient(180deg, rgba(12, 112, 242, 0.5) 19.91%, rgba(12, 112, 242, 0)24.84%), #303030; */
+
+        background: linear-gradient(180deg, rgba(12, 112, 242, 0.5) 25.91%, rgba(12, 112, 242, 0)43.84%), #303030;
+        background-repeat: no-repeat;
+       
     }
+    /* Menu principal */
     #main{
         margin: 0;
         width: 100%;
         height: 100px;
         border: 1px solid black;
-        background-color: #303030;
+        background-color: var(--preto-dnc);
         display: flex;
         justify-content: space-between;
 
@@ -21,7 +31,7 @@
         border-bottom: 1px solid #bababa;
     }
         #main div a:hover{
-            color: #cccccc;
+            color: var(--cinza-hover);
         }
         #menu{
             align-items: center;
@@ -32,7 +42,7 @@
             margin-left: 5%;
         }
         #main div a{
-            font-family: 'Inter';
+            font-family: var(--font-padrão);
             color: white;
             font-size: 25px;
             font-weight: 600;
@@ -42,16 +52,113 @@
 
         #main button{
             margin-right: 5%;
-            background-color: #0c70f2;
+            background-color: var(--azul-dnc);
             border: none;
             height: 40px;
             width: 80px;
 
-            font-family: "Inter";
+            font-family: var(--font-padrão);
             font-size: 20px;
             font-weight: 600;
             color: white;
             cursor: pointer;
             box-shadow: 3px 2px 4px rgba(12, 112, 242, 0.25);
         }
+
+        /* Seção principal do site */
+
+        section{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 100px ;
+            margin-bottom: 100px;
+        }
+
+            header{
+                color: white;
+                font-family: var(--font-padrão);
+            }
+
+            header h1{
+                text-transform: uppercase;
+                font-size: 80px;
+                font-weight: 800;  
+                text-align: center;
+
+                margin-bottom: 20px;             
+            }
+
+            header h2{
+                text-align: center;
+                font-size: 40px;
+                font-weight: 700;
+                margin-bottom: 100px;
+            }
+
+            .invert{
+                background-color: black;
+                font-size: bold;
+                padding: 5px;
+            }
+
+            /* Formulário */
+
+            form{
+                color: white;
+                font-family: var(--font-padrão);
+                font-size: 30px;
+                width: 600px;
+                font-weight: 600;
+            }
+            .form-group{
+                display: flex;
+                flex-direction: column;
+                margin: 10px 0 10px 0;
+            }
+            form input{
+                border-radius: 10px;
+                border: none;
+                padding-left:10px ;
+                height: 50px;
+                font-size: 20px;
+                background-color: rgba(255, 255, 254, 0.9);
+            }
+
+            form label{
+                margin: 10px 0 10px 0;
+            }
+
+            form input::placeholder{
+                color: rgba(57,57,57,0.5);
+            }
+
+            .checkbox-itens label{
+                font-size: 25px;
+                
+            }
+
+            .checkbox-itens{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            input[type="checkbox"]{
+                transform: scale(2.0);
+                border: 0px;
+            }
+            input[type="submit"]{
+                background-color: #0c70f2;
+                box-shadow: 0px 6px 4px rgba(12, 112, 242, 0.25);
+                width: 100%;
+                height: 56px;
+                color: white;
+                font-family: var(--font-padrão);
+                font-size: 32px;
+                font-weight: 600;
+                margin-top: 50px;
+                cursor: pointer;
+            }
 

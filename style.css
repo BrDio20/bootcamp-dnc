@@ -11,9 +11,8 @@
         margin: 0;
         padding: 0;
 
-        background: linear-gradient(180deg, rgba(12, 112, 242, 0.5) 19.91%, rgba(12, 112, 242, 0)24.84%), #303030;
+        background: linear-gradient(180deg, rgba(12, 112, 242, 0.5) 25.91%, rgba(12, 112, 242, 0)35.84%), #303030;
 
-        /* background: linear-gradient(180deg, rgba(12, 112, 242, 0.5) 25.91%, rgba(12, 112, 242, 0)43.84%), #303030; */
         background-repeat: no-repeat;
        
     }
@@ -249,3 +248,55 @@
             footer .row2{
                 color: var(--cinza-hover);
             }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    /* Menu */
+    #main{
+        flex-direction: column;
+        height: auto;
+    }
+
+    #menu{
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+
+    #menu a{
+        height: 50px;
+        display: flex ;
+        align-items: center;
+    }
+
+    #main button {
+        width: 100%;
+        margin: 0;
+    }
+    
+    /* Sections */
+
+    section h1{
+        font-size: 18px;
+    }
+
+    section h2{
+        font-size: 28px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    form{
+        width: 95%;
+        font-size: 20px;
+    }
+    .checkbox-itens label{
+        font-size: 15px;
+    }
+
+    /* footer */
+
+    footer{
+        width: 95%;
+    }
+}
